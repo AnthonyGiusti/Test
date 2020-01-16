@@ -1,27 +1,21 @@
-public class Mur {          //Un mur vaut 3 dans le jeu
-    private int x;
-    private  int y;
+public class Mur extends Tuile {        //Un mur de peiire vaut 3 et un mur de glace vaut 4
 
-    public Mur(String nom, int x, int y) {
-        this.x = x;
-        this.y = y;
+    public String typeDeMur;
+
+
+    public Mur(String typeDeTuile, int x, int y, String typeDeMur) {
+        super(typeDeTuile, x, y);
+        this.typeDeMur = typeDeMur;
     }
 
-    public int getX() {
-        return x;
+
+    public String getTypeDeMur() {
+        return typeDeMur;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
 
-    public int getY() {
-        return y;
+    public void setTypeDeMur(String typeDeMur) {
+        this.typeDeMur = typeDeMur;
     }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
 
 }
