@@ -1,34 +1,17 @@
-public class Tortue {           //Une tortue vaut 1 dans le jeu
-    private String nom;
-    private int x;
-    private  int y;
-    private String direction = "Sud";
+public class Tortue extends Tuile{  //Une tortue vaut 1 dans le jeu
 
+    public String direction;
 
-    public Tortue(String nom, int x, int y) {
-        this.nom = nom;
-        this.x = x;
-        this.y = y;
-
-
+    public Tortue(String typeDeTuile, int x, int y, String direction) {
+        super(typeDeTuile, x, y);
+        this.direction = direction;
     }
 
-    public int getX() {
-        return x;
+    public String getDirection() {
+        return direction;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setDirection(String direction) {
+        this.direction = direction;
     }
-
-    public int getY() {
-        return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-
-
 }
